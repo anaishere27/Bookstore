@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">BookStore</h2>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">New Books</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Special Offers</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Gift Card</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Best Seller</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="book-filter">
+  <label for="authorFilter">Filter by author:</label>
+  <select id="authorFilter">
+    <option value="all">All</option>
+    <option value="James Clear">James Clear</option>
+    <option value="Mark Manson">Mark Manson</option>
+    <option value="Daniel Kahneman">Daniel Kahneman</option>
+  </select>
+</div>
+                <div class="hero-details">
+                    <h2 class="title">BookStore</h2>
+                    <h3 class="subtitle">SHOP YOUR FAVOURITE BOOKS ONLINE</h3>
+                    <p class="description">Welcome to our BookStore</p>
+                    <div class="buttons">
+                        <a href="#" class="button order-now">Order Now</a>
+                        <a href="#" class="button contact-us">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="{{ url_for('static', filename='img/hero.jpg') }}" alt="hero" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <div class="book-card-horizontal">
+  <img src="https://covers.openlibrary.org/b/id/10521263-L.jpg" alt="Book Cover" class="book-img">
+  <div class="book-info">
+    <h3 class="book-title">Atomic Habits</h3>
+    <p class="book-author">by James Clear</p>
+    <p class="book-price">$18.99</p>
+    <button class="book-button">Add to Cart</button>
+  </div>
+</div>
+    </main>
+
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <h2>Create a New Account</h2>
+
+<form id="registerForm">
+    <input type="text" name="name" placeholder="Full Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button type="submit">Register</button>
+</form>
+
+<p id="registerError" style="color:red;"></p>
+<p id="registerSuccess" style="color:green;"></p>
+    
+<p id="error" style="color:red;"></p>
+
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+    <p id="registerError" style="color:red;"></p>
+    <p id="registerSuccess" style="color:green;"></p>
+</body>
+</html>
